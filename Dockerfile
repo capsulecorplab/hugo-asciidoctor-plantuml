@@ -1,4 +1,4 @@
-FROM capsulecorplab/asciidoctor-extended:latest
+FROM capsulecorplab/asciidoctor-extended:html5s
 
 # Install golang from source
 ARG GOLANG_VERSION=1.14.3
@@ -21,7 +21,7 @@ RUN go version
 RUN apk add --update nodejs nodejs-npm
 
 # Install hugo
-ARG DOCKER_HUGO_VERSION="0.76.5"
+ARG DOCKER_HUGO_VERSION="0.82.0"
 ENV DOCKER_HUGO_NAME="hugo_extended_${DOCKER_HUGO_VERSION}_Linux-64bit"
 ENV DOCKER_HUGO_BASE_URL="https://github.com/gohugoio/hugo/releases/download"
 ENV DOCKER_HUGO_URL="${DOCKER_HUGO_BASE_URL}/v${DOCKER_HUGO_VERSION}/${DOCKER_HUGO_NAME}.tar.gz"

@@ -2,6 +2,14 @@
 
 This repository contains a Dockerfile and Gemfile.lock for building a docker image that contains Hugo (extended version) with Nodejs, npm, Asciidoctor, & PlantUML.
 
+== Build Instructions ==
+
+To build locally, run:
+
+....
+docker build -t hugo-asciidoctor-plantuml:Dockerfile .
+....
+
 == Usage ==
 
 Pull docker image using:
